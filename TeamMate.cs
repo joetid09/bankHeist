@@ -1,12 +1,23 @@
-using System;
-
-namespace BankHeist
+namespace Heist
 {
-    class Program
+    class TeamMate
     {
-        static void Main(string[] args)
+        public string Name { get; set; }
+        public int SkillLevel { get; set; }
+        public double Courage { get; set; }
+
+        public void AddName(string name)
         {
-            Console.WriteLine("Hello World!");
+            Name = name;
+        }
+        public void AddSkillLevel(int skill)
+        {
+            SkillLevel = skill;
+        }
+        public void AddCourage(double rating)
+        {
+            Courage = rating;
         }
     }
+
 }
