@@ -49,7 +49,9 @@ namespace Heist
             //     Console.WriteLine($"TeamMate: {member.Name} Skill: {member.SkillLevel} Courage: {member.Courage}");
             // }
 
-            int bankDifficulty = 100;
+            Random rnd = new Random();
+            int luckyNumber = rnd.Next(-10, 10);
+            int bankDifficulty = 100 + luckyNumber;
 
             List<int> SkillCatcher = new List<int>();
             foreach (TeamMate member in team)
@@ -61,10 +63,14 @@ namespace Heist
 
             if (teamSkill > bankDifficulty)
             {
+                Console.WriteLine($"With your powers combined, you have {teamSkill} total points!");
+                Console.WriteLine($"The banks difficulty is: {bankDifficulty}!");
                 Console.WriteLine("You've robbed a bank!");
             }
             else
             {
+                Console.WriteLine($"With your powers combined, you have {teamSkill} total points!");
+                Console.WriteLine($"The banks difficulty is: {bankDifficulty}");
                 Console.WriteLine("You have failed!");
             }
 
